@@ -1,1 +1,1 @@
-for study node.js, nest.js, typescript
+## For study node.js, nest.js and typescript
