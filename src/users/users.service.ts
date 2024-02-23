@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 
 // annotation(@)을 쓰지 않아서, HTTP Method에 따른 기능에 구애받지 않고 함수 로직에만 초점을 두어 기능의 자유도를 부여
 
-@Injectable()
+@Injectable() // Dependency Injection Annotation이며, Module에 Provider 지정이 필요
 export class UsersService {
     getAllUsers() {
         return users;

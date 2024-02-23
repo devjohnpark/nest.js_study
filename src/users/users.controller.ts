@@ -7,11 +7,14 @@ import { UsersService } from './users.service';
 // 여러 Business Logic(Service)을 조합하여, 요청에 대한 응답 처리 가능
 // 다른 Business Logic(Service) Module 파일을 import하여, 같은 기능을 수행하도록 재활용 가능 (GET, POST...) 
 
-@Controller('users')
+@Controller('users') // 아래의 클래스가 컨트롤러라고 annotation
 export class UsersController {
   // userService: UsersService; // this.userService
 
-  constructor(public readonly usersService: UsersService) { 
+  // Service 클래스에 대한 인스턴스를 생성 하지 않음(Service에 대한 Injection은 해준적이 없음)
+  // 그런데 아래의 코드들에는 인스턴스를 참조한다. -> Nest.js IOC(Inversion Of Control) -> IOC Container에서 Service 인스턴스 자동 생성 (Service Injection)
+  // IOC Container 내의 UserService 인스턴스가 포인팅을 Controller으로 하기 때문에 Provider라고 한다.
+  constructor(private readonly usersService: UsersService) {  // userService: UsersService; // this.userService
     // this.userService = usersService; // private readonly
   }
 
