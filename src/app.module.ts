@@ -8,7 +8,7 @@ import { UsersModel } from './users/entities/users.entity';
 @Module({ 
   imports: [ // 생성한 Modules을 import (nest cli로 자동 생성 가능)
     UsersModule, 
-    TypeOrmModule.forRoot({ // Nest.js와 TypeOrm 연동 (최상위 모듈인, app.modules.ts과 연동하고 forRoot 함수로 연동가능)
+    TypeOrmModule.forRoot({ // Nest.js와 TypeOrm 연동 (Nest.js의 최상위 모듈인 app.modules.ts와 TypeORM를 연동)
       // DB Type
       type: 'postgres',
       host: '127.0.0.1',

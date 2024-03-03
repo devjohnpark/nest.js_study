@@ -7,7 +7,7 @@ import { UsersService } from './users.service';
 // 여러 Business Logic(Service)을 조합하여, 요청에 대한 응답 처리 가능
 // 다른 Business Logic(Service) Module 파일을 import하여, 같은 기능을 수행하도록 재활용 가능 (GET, POST...) 
 
-@Controller('users') // 아래의 클 래스가 컨트롤러라고 annotation
+@Controller('users') // 아래의 클래스가 컨트롤러라고 annotation
 export class UsersController {
   // userService: UsersService; // this.userService
 
@@ -25,12 +25,13 @@ export class UsersController {
   }
 
   // GET /users/:id
+  // id를 query parameter로 요청해서 들어옴  
   @Get(':id') // :은 path parameter, id는 value of path parameter 
   getUser(@Param('id') id: string) {
     return this.usersService.getUserById(+id);
   }
 
-  // POST /users /:
+  // POST /users 
   @Post()
   postUser(
     @Body('name') name: string,
@@ -38,7 +39,9 @@ export class UsersController {
   ) {
     return this.usersService.createUser(name, age);
   }
+
   // PUT /users/:id
+  // id를 query parameter로 요청, body에 수정할 데이터 요청해서 들어옴
   @Put(':id')
   putUser(
     @Param('id') id: string,

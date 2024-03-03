@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { UsersModel } from './entities/users.entity';
 
-// @GET과 같응ㄴ HTTP Method에 따른 annotation을 쓰지 않아, 기능에 구애받지 않고 함수 로직에만 초점을 두어 기능의 자유도를 부여
+// @GET과 같은 HTTP Method에 따른 annotation을 쓰지 않아, 기능에 구애받지 않고 함수 로직에만 초점을 두어 기능의 자유도를 부여
 
 @Injectable() // Dependency Injection Annotation이며, Module에 Provider 지정이 필요
 export class UsersService {

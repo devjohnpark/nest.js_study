@@ -2,7 +2,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class UsersModel {
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn() // Primary Column
     id: number;
 
     @Column()

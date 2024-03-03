@@ -1,1 +1,1 @@
-## For study node.js, nest.js and typescript
+## For study nest.js, typescript, typeorm, postresql, docker
