@@ -90,27 +90,27 @@ export class UsersService {
 }
 
 
-export interface UserModel {
-    id: number;
-    name: string;
-    age: number;
-}
+// export interface UserModel {
+//     id: number;
+//     name: string;
+//     age: number;
+// }
   
-let users: UserModel[] = [
-    {
-        id: 1,
-        name: 'John',
-        age: 20,
-    },
-        {
-        id: 2,
-        name: 'Amily',
-        age: 21,
-    },
-    {
-        id: 3,
-        name: 'Micky',
-        age: 22,
-    },
-];
+// let users: UserModel[] = [
+//     {
+//         id: 1,
+//         name: 'John',
+//         age: 20,
+//     },
+//         {
+//         id: 2,
+//         name: 'Amily',
+//         age: 21,
+//     },
+//     {
+//         id: 3,
+//         name: 'Micky',
+//         age: 22,
+//     },
+// ];
 
